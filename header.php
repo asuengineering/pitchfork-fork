@@ -21,9 +21,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
+	<?php asuwp_load_global_head_scripts(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div class="container">
+	<?php asuwp_load_global_header();?>
+</div>
+
+	<!-- ******************* Google Tag Manager ASU Universal ******************* -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KDWN8Z"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KDWN8Z');</script>
+	<!-- End Google Tag Manager ASU Universal -->
 
 <div class="hfeed site" id="page">
 
@@ -32,29 +46,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<nav class="navbar navbar-expand-md navbar-dark">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
 		<?php endif; ?>
-
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-						<?php endif; ?>
-
-
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>

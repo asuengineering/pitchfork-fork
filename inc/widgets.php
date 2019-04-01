@@ -91,24 +91,44 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'after_title'   => '',
 		) );
 
+		// register_sidebar( array(
+		// 	'name'          => __( 'Top Full', 'understrap' ),
+		// 	'id'            => 'statichero',
+		// 	'description'   => 'Full top widget with dynmic grid',
+		//     'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. understrap_slbd_count_widgets( 'statichero' ) .'">', 
+		//     'after_widget'   => '</div><!-- .static-hero-widget -->', 
+		//     'before_title'   => '<h3 class="widget-title">', 
+		//     'after_title'    => '</h3>',
+		// ) );
+
+		// register_sidebar( array(
+		// 	'name'          => __( 'Bottom Full', 'understrap' ),
+		// 	'id'            => 'footerfull',
+		// 	'description'   => 'Full bottom widget with dynmic grid',
+		//     'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. understrap_slbd_count_widgets( 'footerfull' ) .'">', 
+		//     'after_widget'   => '</div><!-- .footer-widget -->', 
+		//     'before_title'   => '<h3 class="widget-title">', 
+		//     'after_title'    => '</h3>', 
+		// ) );
+
 		register_sidebar( array(
-			'name'          => __( 'Top Full', 'understrap' ),
-			'id'            => 'statichero',
-			'description'   => 'Full top widget with dynmic grid',
-		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. understrap_slbd_count_widgets( 'statichero' ) .'">', 
-		    'after_widget'   => '</div><!-- .static-hero-widget -->', 
-		    'before_title'   => '<h3 class="widget-title">', 
-		    'after_title'    => '</h3>',
+			'name'          => __( 'Footer: Branding Area', 'understrap' ),
+			'id'            => 'footer-branded',
+			'description'   => 'Left 1/3 of the footer, used in conjunction with ASU Branding Widget & ASU Social Media Widget. Will always be left 1/3 of the footer, when present.',
+			'before_widget'  => '<div id="%1$s" class="footer-branded-widget %2$s">', 
+			'after_widget'   => '</div><!-- .footer-branded-widget -->', 
+			'before_title'   => '<h4 class="widget-title">', 
+			'after_title'    => '</h4>',
 		) );
 
 		register_sidebar( array(
-			'name'          => __( 'Bottom Full', 'understrap' ),
-			'id'            => 'footerfull',
-			'description'   => 'Full bottom widget with dynmic grid',
-		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. understrap_slbd_count_widgets( 'footerfull' ) .'">', 
-		    'after_widget'   => '</div><!-- .footer-widget -->', 
-		    'before_title'   => '<h3 class="widget-title">', 
-		    'after_title'    => '</h3>', 
+			'name'          => __( 'Footer: Flexible Content', 'understrap' ),
+			'id'            => 'footer-flex',
+			'description'   => 'Right 2/3 of the footer. Content within will stack from left to right in flexible width  columns. Use Menu widgets to create typical footer menu structure.',
+			'before_widget'  => '<div id="%1$s" class="footer-flex-widget col %2$s">', 
+			'after_widget'   => '</div><!-- .footer-flex-widget -->', 
+			'before_title'   => '<h4 class="widget-title">', 
+			'after_title'    => '</h4>',
 		) );
 
 	}

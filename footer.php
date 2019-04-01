@@ -7,45 +7,39 @@
  * @package understrap
  */
 
-$the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_sidebar( 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+<?php if ( is_active_sidebar('footer-branded') || is_active_sidebar('footer-flex') ) : ?>
+	
+	<!-- ******************* The ASU Super Footer Area ******************* -->
+	<div class="wrapper" id="wrapper-super-footer">
+		<div class="<?php echo esc_attr( $container ); ?>" id="footer-full-content" tabindex="-1">
+			<div class="row">
 
-		<div class="row">
+				<?php 
+					if ( is_active_sidebar( 'footer-branded' ) ) :
+						echo '<div id="footer-branded-area" class="col-md-4">';
+						dynamic_sidebar( 'footer-branded' );
+						echo '</div>';
+					endif;
 
-			<div class="col-md-12">
+					if ( is_active_sidebar( 'footer-flex' ) ) :
+						dynamic_sidebar( 'footer-flex' );
+					endif;
+				?>
 
-				<footer class="site-footer" id="colophon">
+			</div>
+		</div><!-- end #footer-full-content -->
+	</div><!-- end #wrapper-super-footer -->
 
-					<div class="site-info">
+<?php endif; ?>
 
-							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?> 
-				
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
-					</div><!-- .site-info -->
+<div class="wrapper" id="wrapper-asu-footer">
 
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
+	<?php asuwp_load_global_footer(); ?>
 
 </div><!-- wrapper end -->
 
@@ -56,4 +50,3 @@ $container = get_theme_mod( 'understrap_container_type' );
 </body>
 
 </html>
-
