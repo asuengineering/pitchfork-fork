@@ -6424,7 +6424,7 @@ a.skip-link {
   padding: 0;
   background-color: #353535;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #353535;
   color: #ededed; }
@@ -6432,7 +6432,7 @@ a.skip-link {
     font-size: 16px;
     font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-bottom: 0px;
-    font-weight: 400;
+    font-weight: 7x 00;
     padding: 1rem;
     color: #ededed; }
   .navbar .navbar-nav .dropdown-menu {
@@ -6465,7 +6465,7 @@ a.skip-link {
     padding-right: .95rem;
     padding-left: .95rem; } }
 
-/* =======================================================
+/* ====================================================
   ASU Super Footer area
   Super Footer Widget styles
   ASU Footer (Global)

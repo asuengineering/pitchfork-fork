@@ -91,7 +91,7 @@ function asuwp_add_home_menu_icon ( $items, $args ) {
         }
 
         $homeicon .= '<a href="' . get_home_url() . '" title="Home" id="home-icon-main-nav" class="nav-link">';
-        $homeicon .= '<span class="fa fa-home" aria-hidden="true"></span>';
+        $homeicon .= '<span class="fas fa-home"></span>';
         $homeicon .= '</a>';
         $homeicon .= '</li>';
         
