@@ -464,7 +464,7 @@ pre {
       max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 960px; } }
+      max-width: 980px; } }
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
@@ -6391,6 +6391,14 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+@media (max-width: 575px) {
+  #asu-global-header.container {
+    padding-left: 0;
+    padding-right: 0; } }
+
+#asu-global-header #main-search label {
+  display: none; }
+
 /* Site Name + Subsite Name */
 #sitename-wrapper {
   position: relative;
@@ -6428,6 +6436,11 @@ a.skip-link {
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #353535;
   color: #ededed; }
+  .navbar .navbar-brand {
+    margin-left: 15px; }
+  @media (min-width: 768px) {
+    .navbar .navbar-brand {
+      display: none; } }
   .navbar .navbar-nav .menu-item .nav-link {
     font-size: 16px;
     font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;

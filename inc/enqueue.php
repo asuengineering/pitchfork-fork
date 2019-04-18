@@ -26,6 +26,7 @@ function asufse_enqueue_scripts() {
 	
 	$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/js/theme.min.js');
 	wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
+	wp_enqueue_script( 'asu-mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array(), $js_version, true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

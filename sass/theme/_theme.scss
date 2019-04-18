@@ -1,5 +1,18 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+#asu-global-header {
+    @media (max-width: 575px) {
+        &.container {
+            padding-left:0;
+            padding-right:0;
+        }
+    }
+
+    #main-search label {
+        display: none;
+    }
+}
+
 /* Site Name + Subsite Name */
 #sitename-wrapper {
     position: relative;
@@ -53,6 +66,16 @@ $nav-text-hover: #ffb310;
     font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: $nav-bg;
     color: $nav-text;
+
+    .navbar-brand {
+        margin-left:15px;
+    }
+
+    @media (min-width: 768px) {
+        .navbar-brand {
+            display:none;
+        }
+    }
 
     .navbar-nav {
         .menu-item .nav-link {

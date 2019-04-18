@@ -15,9 +15,14 @@ Use Pitchfork as a parent for your own child theme theme, or fork it proudly and
 
 ## Release Notes
 
-### Version 0.2
+### Version 0.2 ###
 
-** Version 0.2.1 **
+**Version 0.2.2**
+
+- Added JS functions to translate BS4 Navmenu object to ASU global mobile menu.
+- Improvements to mobile menu formatting.
+
+**Version 0.2.1**
 
 - Continued improvement to the product. Minor adjustments.
 

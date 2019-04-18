@@ -69,7 +69,7 @@ function asuwp_load_global_header() {
 
     $parent = asuwp_load_header_sitenames();
 
-    $response .= '<div id="sitename-wrapper">' . $parent . '<a href="'. get_home_url() . '" title="Home" rel="home" id="current-site">'. get_bloginfo( 'name' ) . '</a></div>';
+    $response .= '<div id="sitename-wrapper" class="d-none d-lg-block">' . $parent . '<a href="'. get_home_url() . '" title="Home" rel="home" id="current-site">'. get_bloginfo( 'name' ) . '</a></div>';
     echo $response;
 
 }
